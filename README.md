@@ -1,7 +1,7 @@
 # To Do App
 
 ## Overview
-This is a Task Management API built using Flask and JavaScript. The backend provides RESTful endpoints for managing tasks, while the frontend interacts with these endpoints to display tasks dynamically.
+ToDo App is a Web application built by using Flask and JavaScript, designed to help users manage tasks, organize their daily activities, and track progress.
 
 ## Features
 - Create, read, update, and delete tasks
