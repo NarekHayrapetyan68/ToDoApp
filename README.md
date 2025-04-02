@@ -4,10 +4,12 @@
 ToDo App is a Web application built by using Flask and JavaScript, designed to help users manage tasks, organize their daily activities, and track progress.
 
 ## Features
-- Create, read, update, and delete tasks
-- Assign priority levels to tasks (low, medium, high)
-- Store and retrieve tasks from a database
-- Handle CORS for cross-origin requests
+- User registration and login via a web form
+- Secure authentication using JWT tokens
+- Task creation, editing, and deletion through a graphical interface
+- Task priority management (low, medium, high)
+- Database storage and retrieval of tasks
+- Responsive design for seamless use on different devices
 
 ## Technologies Used
 ### Backend
@@ -141,6 +143,8 @@ This project is open-source and available under the MIT License.
 ## Contributors
 - **Narek Hayrapetyan** - Developer
 - Open for contributions! Feel free to submit PRs.
+
+
 
 
 
