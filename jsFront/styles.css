@@ -513,6 +513,13 @@ span{
         max-width: 600px;
     }
 
+    #logout{
+        top: 10px;
+        right: 50px;
+        padding: 6px 10px;
+        font-size: 14px;
+
+    }
 
     #dark-mode {
         top: 10px;
@@ -557,6 +564,14 @@ span{
 
     .filter-container {
         width: 100%;
+    }
+
+    #logout{
+        top: 10px;
+        right: 50px;
+        padding: 6px 10px;
+        font-size: 14px;
+
     }
 
     #dark-mode {
