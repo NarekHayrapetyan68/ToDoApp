@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+<nav>
+    <button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+    <button id="dark-mode">🌖</button>
+</nav>
+<header class="title">
+    <h1>TO DO APP</h1>
+</header>
+
+<main class="wrapper">
+    <form class="form-container">
+        <input id='todo_input' type="text" placeholder="What needs to be done?" autocomplete="off">
+        <select name="type" id="types">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+
+        </select>
+
+        <input type="date" id="task-date" name="task-date" placeholder="Date">
+        <button id="add_button">ADD</button>
+    </form>
+    <form class="filter-container">
+        <span><img src="adjust_10016969.png" height="40px" , width="40px"></i> </span>
+
+        <!--            <span class="radio-text">All</span>-->
+        <input type="radio" id="all-filter" name="filter-status" value="all" checked>
+        <label for="all-filter" class="filter-custom-radio"><i class="fa-solid fa-list"></i></label>
+        <!--            <span class="radio-text">Completed</span>-->
+        <input type="radio" id="pending-filter" name="filter-status" value="pending">
+        <label for="pending-filter" class="filter-custom-radio"><i class="fa-regular fa-hourglass-half"></i></label>
+
+        <!--            <span class="radio-text">Pending</span>-->
+
+        <input type="radio" id="completed-filter" name="filter-status" value="completed">
+        <label for="completed-filter" class="filter-custom-radio"><i class="fa-solid fa-check-double"></i></label>
+
+
+    </form>
+
+</main>
+<section class="todo-container">
+    <div id="loading-spinner" style="display: none;"></div>
+
+    <ul id="todo-list">
+<!--        <li class="todo">-->
+<!--            <input type="checkbox" id="todo-1" class="hidden-checkbox">-->
+<!--            <label class="custom_checkbox" for="todo-1">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"-->
+<!--                     fill="#1f1f1f">-->
+<!--                    <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>-->
+<!--                </svg>-->
+<!--            </label>-->
+<!--            <span id="todo-text-container">-->
+<!--                <label for="todo-1" class="todo-text">-->
+<!--                    cxcdscsd<span>overdue</span>-->
+<!--                </label>-->
+<!--                    <span class="testcont">-->
+<!--                        <span>date</span>-->
+
+<!--                        <span>priority</span>-->
+<!--                    </span>-->
+<!--            </span>-->
+<!--            <button class="edit-button">-->
+<!--                REMOVE <i class="fa-solid fa-trash"></i>-->
+<!--            </button>-->
+<!--            <button class="delete-button">-->
+<!--                REMOVE <i class="fa-solid fa-trash"></i>-->
+<!--            </button>-->
+<!--        </li>-->
+
+    </ul>
+
+</section>
+<script type="module" src="scripts.js"></script>
+
+</body>
+</html>

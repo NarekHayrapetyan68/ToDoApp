@@ -1,0 +1,112 @@
+:root {
+    --primary-bg: linear-gradient(to bottom, #4b715b, #d4b996);
+    --form-bg: linear-gradient(to bottom, #885bd6, #43a09d);
+    --button-bg: #4b715b;
+    --button-hover-bg: #3a5c48;
+    --input-border: #ddd;
+    --text-color: white;
+    --button-gradient: linear-gradient(to right, #1de8dd, #0f3496);
+
+}
+
+.dark-mode {
+
+    --primary-bg: linear-gradient(to bottom, #1a1a2e, #16213e);
+    --form-bg: linear-gradient(to bottom, #2e2e2e, #4b4b4b);
+    --input-border: #555;
+    --button-bg: #222;
+    --button-hover-bg: #000000;
+    --text-color: #f0f0f0;
+    --button-gradient: linear-gradient(to right, #00c9ff, #0052d4);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-bg) fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.register-form {
+    background: var(--form-bg);
+    width: 400px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 28px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.register-form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.register-form-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.register-form-input:focus{
+    outline: none;
+}
+
+.register-form-button {
+    width: 95%;
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-form-button:hover {
+    background: var(--button-hover-bg);
+}
+
+h1,h5 {
+    color: var(--text-color);
+}
+
+#dark-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background: var(--button-gradient);
+    color: var(--text-color);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .register-form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        width: 90%;
+    }
+}
+
