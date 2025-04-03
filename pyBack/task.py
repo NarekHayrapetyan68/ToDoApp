@@ -75,27 +75,14 @@ def delete_task(task_id):
 
 
 
-@task_bp.route("/tasks/priority/<priority>", methods=["GET"])
-@jwt_required()
-def filter_by_priority(priority):
-    tasks = Task.query.filter(Task.priority==priority).all()
-    return jsonify([{
-        "id": task.id,
-        "title": task.title,
-        "priority": task.priority,
-        "due_date": task.due_date,
-        "completed": task.completed
-    } for task in tasks])
-
 
 @task_bp.route("/tasks/completed/<completed>", methods=["GET"])
 @jwt_required()
 def filter_by_status(completed):
-
+    current_user_id = get_jwt_identity()
     completed_bool = completed.lower() == "true"
-    print(completed_bool)
 
-    tasks = Task.query.filter(Task.completed==completed_bool).all()
+    tasks = Task.query.filter(Task.completed == completed_bool, Task.user_id == current_user_id).all()
 
     return jsonify([{
         "id": task.id,
@@ -104,6 +91,5 @@ def filter_by_status(completed):
         "due_date": task.due_date,
         "completed": task.completed
     } for task in tasks])
-
 
 
