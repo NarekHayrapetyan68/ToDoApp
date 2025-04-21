@@ -13,14 +13,14 @@ def get_tasks():
         user_id = get_jwt_identity()  # Get the user identity from the JWT token
     except Exception as e:
         return jsonify({"message": "Unauthorized", 'error': e,}), 401
-    taskss = Task.query.filter(Task.user_id == user_id).all()
+    tasks = Task.query.filter(Task.user_id == user_id).all()
     return jsonify([{
         "id": task.id,
         "title": task.title,
         "priority": task.priority,
         "due_date": task.due_date,
         "completed": task.completed
-    } for task in taskss])
+    } for task in tasks])
 
 # Add a new task
 @task_bp.route("/tasks", methods=["POST"])
