@@ -27,3 +27,17 @@ jobs:
       - name: Run tests with pytest
         run: |
           pytest  pyBack/tests
+  
+
+  check_forntend:
+    runs-on: ubuntu_latest
+
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Check files
+          run: |
+              ls jsFront
+              echo "frontend files is found"
+
