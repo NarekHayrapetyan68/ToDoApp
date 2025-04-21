@@ -2,7 +2,7 @@ from datetime import date
 
 from sqlalchemy import Enum
 
-from database import db
+from .database import db
 from flask_bcrypt import Bcrypt
 
 bcrypt = Bcrypt()

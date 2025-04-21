@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager
-from config import Config
-from database import db
-from auth import auth_bp
-from task import task_bp
+from .config import Config
+from .database import db
+from .auth import auth_bp
+from .task import task_bp
 from flask_migrate import Migrate
 from flask_cors import CORS
 
